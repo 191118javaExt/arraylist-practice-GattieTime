@@ -19,13 +19,13 @@ public class Driver {
 			reglist.add(val);
 			mylist.add(val);
 		}
-		
+
 		long t1 = System.nanoTime();
 		
 		for(int i = 0; i < AMOUNT; i++) {
 			reglist.set(i, AMOUNT % (2 * (i % 10) + 3));
 		}
-		
+
 		for(int i = 0; i < AMOUNT; i++) {
 			reglist.remove(0);
 		}
@@ -48,6 +48,8 @@ public class Driver {
 		t2 = System.nanoTime();
 		
 		long myTime = t2 - t1;
+		
+		
 		
 		System.out.println("It took ArrayList " + regTime + " ns to complete.");
 		System.out.println("It took MyArrayList " + myTime + " ns to complete.");
